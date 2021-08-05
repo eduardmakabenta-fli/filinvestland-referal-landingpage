@@ -1,0 +1,126 @@
+:root, * {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #424949;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "header" "main" "footer";
+}
+
+body header {
+  padding: 1em;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  background-color: #2e6aaf;
+}
+
+body main {
+  padding: 1em;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+body main section {
+  margin: 1em 0;
+}
+
+body main section div {
+  margin: 1em 0;
+}
+
+body main section div label {
+  display: block;
+  margin: 0 0 .5em 0;
+}
+
+body main section div label span.required-marker {
+  color: #FF0000;
+}
+
+body main section div input, body main section div textarea {
+  padding: 0.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  border: solid 1px grey;
+  border-radius: 2px;
+}
+
+body main section div input[type=submit] {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  border: solid 1px grey;
+  border-radius: 2px;
+}
+
+body main section div input:focus, body main section div textarea:focus {
+  outline: solid 1.5px #2e6aaf;
+  border: solid 1px #2e6aaf;
+}
+
+body footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  background-color: #2e6aaf;
+  color: #FFFFFF;
+  padding: 1em;
+}
+
+body footer section {
+  color: inherit;
+}
+
+body footer section p {
+  color: inherit;
+}
+
+body footer section p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media only screen and (min-width: 900px) {
+  body header {
+    padding: 1em 20%;
+  }
+  body main {
+    padding: 1em 20%;
+  }
+  body footer {
+    padding: 1em 20%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  body footer section.copyright {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  body footer section.footer-links {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+}
+/*# sourceMappingURL=main.css.map */
